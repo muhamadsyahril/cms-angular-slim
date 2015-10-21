@@ -1,0 +1,115 @@
+<div>
+
+    <h2>Users</h2>
+
+    <script type = "text/ng-template" id="users-save.html">
+
+        <form name="form" role="form" novalidate
+              class="ng-scope ng-invalid ng-invalid-required ng-dirty"
+              ng-submit="ok()">
+
+            <div class="modal-header">
+                <button type="button" class="close"
+                        ng-click="cancel()">&times;</button>
+                <h4 class="modal-title" id="myUsersLabel">Create or edit a Users</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>username:</label>
+                    
+                    <input type="text" class="form-control" name="username"
+                           ng-model="users.username" ng-required="true"
+                           ng-maxlength=225/>
+                    <span class="error" ng-show="form.username.$error.minlength">Must be at least  characters.</span>
+                    <span class="error" ng-show="form.username.$error.maxlength">Must be at most 225 characters.</span>
+                </div>
+                
+                <div class="form-group">
+                    <label>email:</label>
+                    
+                    <input type="text" class="form-control" name="email"
+                           ng-model="users.email" ng-required="true"
+                           ng-maxlength=225/>
+                    <span class="error" ng-show="form.email.$error.minlength">Must be at least  characters.</span>
+                    <span class="error" ng-show="form.email.$error.maxlength">Must be at most 225 characters.</span>
+                </div>
+                
+                <div class="form-group">
+                    <label>password:</label>
+                    
+                    <input type="text" class="form-control" name="password"
+                           ng-model="users.password" ng-required="true"
+                           ng-maxlength=225/>
+                    <span class="error" ng-show="form.password.$error.minlength">Must be at least  characters.</span>
+                    <span class="error" ng-show="form.password.$error.maxlength">Must be at most 225 characters.</span>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" ng-click="cancel()">Cancel
+                </button>
+                <button type="submit" ng-disabled="form.$invalid" class="btn btn-success">Save</button>
+            </div>
+        </form>
+    </script>
+
+
+    <div class="box">
+    <div class="box-header">
+        <button class="btn btn-success btn-lg" ng-click="create()">Add</button>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+    <table id="example2" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>ID</th>
+
+        <th>username</th>
+
+        <th>email</th>
+
+        <th>password</th>
+
+        <th>Update</th>
+
+        <th>Create</th>
+
+        <th>Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="users in users">
+        <td>{{users.id}}</td>
+
+        <td>{{users.username }}</td>
+
+        <td>{{users.email }}</td>
+
+        <td>{{users.password }}</td>
+
+        <td>{{users.updated_at  | date:'yyyy-MM-dd'}}</td>
+
+        <td>{{users.created_at  | date:'yyyy-MM-dd'}}</td>
+
+        <td>
+            <div class="tools">
+                <i class="fa fa-edit" ng-click="update(users.id)"></i>
+                <i class="fa fa-trash-o" ng-click="delete(users.id)"></i>
+            </div>
+
+        </td>
+    </tr>
+
+    </tbody>
+
+    </table>
+    </div><!-- /.box-body -->
+    </div><!-- /.box -->
+
+
+
+
+
+</div>

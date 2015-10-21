@@ -1,0 +1,54 @@
+{
+	"baseName": "slimapp",
+	"databaseType": "mysql",
+	"hostName": "localhost",
+	"databaseName": "slimapp_db",
+	"userName": "root",
+	"password": "g3mb0k",
+	"entities": [
+		{
+			"name": "users",
+			"attrs": [
+				{
+					"attrName": "username",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "225",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "email",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "225",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "password",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "225",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "create_at",
+					"attrType": "Date",
+					"dateConstraint": "",
+					"enumValues": [],
+					"required": false
+				},
+				{
+					"attrName": "update_at",
+					"attrType": "Date",
+					"dateConstraint": "",
+					"enumValues": [],
+					"required": false
+				}
+			]
+		}
+	],
+	"composer": false
+}

@@ -1,0 +1,11 @@
+.tools .fa-edit:hover{
+    color: limegreen;
+}
+
+.tools .fa-trash-o:hover{
+    color: red;
+}
+
+.tools{
+    cursor: pointer;
+}
