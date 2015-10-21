@@ -2,10 +2,14 @@
 
 
 ###Requirment###
-npm
+nodejs & npm
 ```
-install node js & npm
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 ```
+
 yeoman
 ```
 npm install -g yo
