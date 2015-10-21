@@ -1,4 +1,9 @@
-#CMS WITH ANGULAR - SLIM FRAMEWORK#
+#CMS#
+
+###Feature###
+1.SlimFramework
+2.Angular
+3.AdminLte
 
 
 ###Requirment###
